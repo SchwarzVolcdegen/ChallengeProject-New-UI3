@@ -98,7 +98,7 @@ public class MainController : MonoBehaviour
             currentActionControlButton = button;
             ActiveUI(animationControlUI);
             resetButtonFlag = true;
-            //ResetButtonState(animatedButton);
+            ResetButtonState(animatedButton);
         }
         else if (button.gameObject.tag == "Animation Control Button")
         {
@@ -108,7 +108,7 @@ public class MainController : MonoBehaviour
                     resetButtonFlag = true;
                     pauseAnimationFlag = false;
                     StartCoroutine(RunAnimationCoroutine());
-                    //ResetButtonState(animatedButton);
+                    ResetButtonState(animatedButton);
                     break;
                 case "Pause/Resume Button":
                     pauseAnimationFlag = !pauseAnimationFlag;
